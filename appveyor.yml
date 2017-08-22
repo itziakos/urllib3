@@ -22,15 +22,14 @@ cache:
 init:
   - ps: $Env:path = $Env:python + ";" + $Env:python + "\scripts;" + $Env:path
 install:
-  - ps: pip install --upgrade pip wheel
-  - ps: pip --version
+  - pip install --upgrade pip wheel
+  - pip --version
   - python -c "import struct; print(struct.calcsize('P') * 8)"
-
-  - cmd: pip install -r dev-requirements.txt
+  - pip install -r dev-requirements.txt
 
 build_script:
-  - cmd: pip install .[secure,socks]
+  - pip install .[secure,socks]
 
 test_script:
-  - ps: cd test
-  - ps: pytest -vsx .
+  - cd test
+  - pytest -vsx
