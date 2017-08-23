@@ -57,5 +57,6 @@ test_script:
   - tox
 
 on_success:
+  - .tox/%TOXENV%/Scripts/activate.bat
   - pip install codecov
   - codecov --env PLATFORM,TOXENV
