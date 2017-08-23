@@ -236,5 +236,9 @@ In chronological order:
 * Wolfgang Richter <wolfgang.richter@gmail.com>
   * Bugfix related to loading full certificate chains with PyOpenSSL backend.
 
+* Ioannis Tziakos <mail@itziakos.gr>
+  * Fix ``util.selectors._fileobj_to_fd`` to accept ``long``.
+  * Update appveyor tox setup to use the 64bit python.
+
 * [Your name or handle] <[email or website]>
   * [Brief summary of your changes]
