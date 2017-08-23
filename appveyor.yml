@@ -4,6 +4,7 @@
 build: off
 
 environment:
+
   matrix:
     - PYTHON: "C:\\Python26-x64"
       PYTHON_VERSION: "2.6.x"
@@ -29,6 +30,9 @@ environment:
       PYTHON_VERSION: "3.6.x"
       PYTHON_ARCH: "64"
       TOXENV: "py36"
+
+  global:
+    TOXPYTHON: "%PYTHON%\\python.exe"
 
 install:
   # Install Python (from the official .msi of http://python.org) and pip when
