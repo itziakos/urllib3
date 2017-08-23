@@ -36,6 +36,9 @@ environment:
   global:
     TOXPYTHON: "%PYTHON%\\python.exe"
 
+cache:
+  - C:\Users\appveyor\AppData\Local\pip\Cache
+
 install:
   # Install Python (from the official .msi of http://python.org) and pip when
   # not already installed.
