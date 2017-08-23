@@ -46,8 +46,6 @@ install:
 
   # Upgrade to the latest version of pip to avoid it displaying warnings
   # about it being out of date.
-
-  - "python setup.py install"
   - pip install --disable-pip-version-check --user --upgrade pip wheel
   - pip install tox
 
